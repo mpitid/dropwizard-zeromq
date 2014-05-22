@@ -9,8 +9,7 @@ import org.zeromq.ZMQ;
  *
  * @see ZeroMQSocketFactory
  */
-@JsonTypeName("pair")
-class ZeroMQPairSocketFactory extends BaseZeroMQSocketFactory {
+public class ZeroMQPairSocketFactory extends BaseZeroMQSocketFactory {
 
     public ZMQ.Socket build(final ZContext context) {
         return build(context, ZMQ.PAIR);

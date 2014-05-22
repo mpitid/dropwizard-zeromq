@@ -5,7 +5,6 @@ import com.yammer.dropwizard.config.Environment;
 import org.zeromq.ZContext;
 import org.zeromq.ZMQ;
 
-@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, property = "type")
 public interface ZeroMQSocketFactory {
 
     public ZMQ.Socket build(ZContext context, Environment environment);

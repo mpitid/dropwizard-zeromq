@@ -4,7 +4,7 @@ import com.yammer.dropwizard.lifecycle.Managed;
 import org.zeromq.ZContext;
 
 /** TODO: Document */
-class ManagedContext implements Managed {
+public class ManagedContext implements Managed {
 
     private final ZContext context;
 

@@ -9,8 +9,7 @@ import org.zeromq.ZMQ;
  *
  * @see ZeroMQSocketFactory
  */
-@JsonTypeName("rep")
-class ZeroMQRepSocketFactory extends BaseZeroMQSocketFactory {
+public class ZeroMQRepSocketFactory extends BaseZeroMQSocketFactory {
 
     public ZMQ.Socket build(final ZContext context) {
         return build(context, ZMQ.REP);

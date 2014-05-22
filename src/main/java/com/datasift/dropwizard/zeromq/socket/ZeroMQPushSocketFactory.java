@@ -9,7 +9,6 @@ import org.zeromq.ZContext;
  *
  * @see ZeroMQSocketFactory
  */
-@JsonTypeName("push")
 class ZeroMQPushSocketFactory extends BaseZeroMQSocketFactory {
 
     public ZMQ.Socket build(final ZContext context) {
