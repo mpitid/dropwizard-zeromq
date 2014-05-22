@@ -6,9 +6,9 @@
     </prerequisites>
 
     <parent>
-        <groupId>org.sonatype.oss</groupId>
-        <artifactId>oss-parent</artifactId>
-        <version>7</version>
+        <groupId>com.datasift.parents</groupId>
+        <artifactId>java</artifactId>
+        <version>4.0.0</version>
     </parent>
 
     <groupId>com.datasift.dropwizard</groupId>
@@ -59,9 +59,9 @@
     </licenses>
 
     <scm>
-        <connection>scm:git:https://github.com/datasift/dropwizard-zeromq</connection>
-        <developerConnection>scm:git:git@github.com:datasift/dropwizard-zeromq</developerConnection>
-        <url>https://github.com/datasift/dropwizard-zeromq</url>
+        <connection>scm:git:https://github.com/mpitid/dropwizard-zeromq</connection>
+        <developerConnection>scm:git:git@github.com:mpitid/dropwizard-zeromq</developerConnection>
+        <url>https://github.com/mpitid/dropwizard-zeromq</url>
     </scm>
 
     <issueManagement>
@@ -199,14 +199,16 @@
     </build>
 
     <distributionManagement>
-        <snapshotRepository>
-            <id>ossrh</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-        </snapshotRepository>
         <repository>
-            <id>ossrh</id>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+            <id>com.datasift.maven.release</id>
+            <name>DataSift Stable Releases</name>
+            <url>scp://repo.sysms.net:/var/www/repo.sysms.net/ds-build-maven/release</url>
         </repository>
+        <snapshotRepository>
+            <id>com.datasift.maven.snapshot</id>
+            <name>DataSift Snapshots</name>
+            <url>scp://repo.sysms.net:/var/www/repo.sysms.net/ds-build-maven/snapshot</url>
+        </snapshotRepository>
     </distributionManagement>
 
     <profiles>
