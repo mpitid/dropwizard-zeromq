@@ -1,7 +1,7 @@
 package com.datasift.dropwizard.zeromq.socket;
 
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
-import io.dropwizard.setup.Environment;
+import com.yammer.dropwizard.config.Environment;
 import org.zeromq.ZContext;
 import org.zeromq.ZMQ;
 

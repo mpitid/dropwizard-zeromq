@@ -1,7 +1,7 @@
 package com.datasift.dropwizard.zeromq;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import io.dropwizard.setup.Environment;
+import com.yammer.dropwizard.config.Environment;
 import org.zeromq.ZContext;
 
 import javax.validation.constraints.Min;
@@ -27,7 +27,7 @@ class ZeroMQFactory {
     public ZContext build(final Environment environment) {
         final ZContext context = new ZContext();
         context.setIoThreads(ioThreads);
-        environment.lifecycle().manage(new ManagedContext(context));
+        environment.manage(new ManagedContext(context));
         return context;
     }
 }

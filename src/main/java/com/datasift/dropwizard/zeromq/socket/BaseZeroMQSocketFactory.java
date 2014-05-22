@@ -5,9 +5,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.common.base.Charsets;
 import com.google.common.base.Optional;
 import com.google.common.collect.ImmutableSet;
-import io.dropwizard.setup.Environment;
-import io.dropwizard.util.Size;
-import io.dropwizard.util.Duration;
+import com.yammer.dropwizard.config.Environment;
+import com.yammer.dropwizard.util.Size;
+import com.yammer.dropwizard.util.Duration;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.NotEmpty;
 import org.zeromq.ZMQ.Socket;
@@ -111,7 +111,7 @@ public abstract class BaseZeroMQSocketFactory implements ZeroMQSocketFactory {
     @Override
     public Socket build(final ZContext context, final Environment environment) {
         final Socket socket = build(context);
-        environment.lifecycle().manage(new ManagedSocket(socket));
+        environment.manage(new ManagedSocket(socket));
         return socket;
     }
 

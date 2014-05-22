@@ -1,6 +1,6 @@
 package com.datasift.dropwizard.zeromq;
 
-import io.dropwizard.lifecycle.Managed;
+import com.yammer.dropwizard.lifecycle.Managed;
 import org.zeromq.ZContext;
 
 /** TODO: Document */
